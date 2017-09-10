@@ -1,12 +1,13 @@
-<ul>
 <% @events.each do |event| %>
   <li>
- 	  <%= event.name %>
-  <%= link_to 'Show', event_path(event) %>
-  <%= link_to 'Edit', edit_event_path(event) %>
-  <%= link_to 'Delete', event_path(event), :method => :delete, :data => { :conform => "Are you sure?" } %>
+    <%= link_to event.name, event_path(event) %>
+    <%= link_to " (XML)", event_path(event, :format => :xml) %>
+    <%= link_to " (JSON)", event_path(event, :format => :json) %>
+    <%= link_to 'edit', edit_event_path(event) %>
+    <%= button_to 'delete', event_path(event), :method => :delete, :data => { :confirm => "Are you sure?" } %>
   </li>
 <% end %>
 </ul>
-<%= paginate @events %>
-<%= link_to 'New Event', new_event_path %>
+
+<%= link_to 'new event', new_event_path %>
+<%= link_to "Atom feed", events_path(:format => :atom) %>
