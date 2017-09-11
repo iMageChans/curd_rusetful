@@ -16,5 +16,5 @@
 
 
 ### 感谢ihower提供的教程
-####原版链接：https://ihower.tw/rails/basic.html
+#### 原版链接：https://ihower.tw/rails/basic.html
 #### 摘自ruby on rails 实战圣经
