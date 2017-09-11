@@ -1,4 +1,6 @@
-<%= @event.name %>
-<%= simple_format(@event.description) %>
+<p><%= @event.name %></p>
+<p><%= simple_format(@event.description) %></p>
 
-<p><%= link_to 'Back to index', events_path %></p>
+<div>
+<%= link_to 'Back to index', events_path, :class => "btn btn-primary" %>
+</div>
